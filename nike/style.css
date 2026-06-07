@@ -1,166 +1,140 @@
-*{
-    margin: 0;
-    padding: 0;
+/* ===========================
+   TABLET DEVICES
+   =========================== */
+
+@media (max-width: 1024px){
+
+    .nav{
+        padding: 0 25px;
+    }
+
+    .nav-1 ul li{
+        margin: 15px;
+        font-size: 16px;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+
+    .content-left{
+        width: 100%;
+        height: auto;
+        padding: 50px;
+    }
+
+    .content-right{
+        width: 100%;
+        height: auto;
+        padding: 40px;
+    }
+
+    .content-left h1{
+        font-size: 45px;
+    }
+
+    .content-left p{
+        width: 100%;
+        font-size: 20px;
+    }
 }
 
-html,body{
-    
-    font-family: "Inter", sans-serif;
-    font-size: 400;
-   
-   
-   
-}
+/* ===========================
+   MOBILE DEVICES
+   =========================== */
 
-.main{
-    height: 100vh;
-    width: 100%;
-   
-    background-color: #d0d4d5
-}
-.nav{
-    height: 110px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 50px;
-   
-}
-.nav-1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media (max-width: 768px){
 
-}
-.nav img{
-    height: 80px;
-    width: auto;
-    cursor: pointer;
-    margin-right: 60px;
+    .nav{
+        height: 80px;
+        padding: 0 20px;
+    }
 
-}
-.nav-1 ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-}
-.nav-1 ul li{
-     margin: 40px;
-     font-size: 19px;
-     font-weight: 600;
-     text-transform: uppercase;
-     cursor: pointer;
+    .nav img{
+        height: 55px;
+        margin-right: 0;
+    }
 
-}
+    /* Hide menu items */
+    .nav-1 ul{
+        display: none;
+    }
 
-.nav-2{
-    margin-right: 40px;
-    font-size: 21px;
-    font-weight: 600;
-    display: flex;
-    gap: 20px;
-    
-    cursor: pointer;
-}
+    /* Show only hamburger menu */
+    .nav-2 i:not(.ri-menu-line){
+        display: none;
+    }
 
-.content{
-    height: calc(100% - 110px);
-    width: 100%;
+    .ri-menu-line{
+        font-size: 30px;
+    }
 
-    position: relative;
-    display: flex;
-}
+    .content{
+        flex-direction: column;
+    }
 
-.content-left{
-    height: 100%;
-    width: 40%;
-   
-    padding: 80px 100px;
-  
-}
+    .content-left{
+        width: 100%;
+        padding: 30px 20px;
+    }
 
-.content-left h4{
-    font-size: 20px;
-    text-transform: capitalize;
-    color: #555;
-    margin-bottom: 10px;
-}
+    .content-left h4{
+        font-size: 16px;
+    }
 
-.content-left p{
-    font-size: 25px;
-    color: #000;
-    width: 80%;
+    .content-left h1{
+        font-size: 35px;
+        line-height: 1.1;
+    }
 
-    margin-bottom: 30px
-}
-.btn{
-    background-color: #000;
-    color: aliceblue;
-    font-size: 15px;
-    padding: 12px 40px;
-    border-radius: 50px;
+    .content-left p{
+        width: 100%;
+        font-size: 18px;
+    }
 
-    cursor: pointer;
-}
+    .btn{
+        padding: 10px 25px;
+        font-size: 14px;
+    }
 
-.btn:hover{
-    background-color: #ff033e;
-    
-}
-.content-right{
-    height: 100%;
-    width: 60%;
-    padding: 110px 100px;
-    white-space: nowrap;
-    overflow-x: auto;
-}
-.content-right::-webkit-scrollbar{
-    display: none;
-}
-.product{
-    height: 370px;
-    width: 250px;
-    background-color: #1011;
-    position: relative;
-    box-shadow: 0 5px 10px rgba(17, 0, 17, 0.3);
-    display: inline-block;
-    margin: 20px;
+    .content-right{
+        width: 100%;
+        padding: 20px;
+        overflow-x: auto;
+    }
 
-}
-.product img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    position: absolute;
-    bottom: 20%;
+    .product{
+        width: 220px;
+        height: 330px;
+    }
 
 }
 
-.product h4{
-    font-size: 18px;
-    text-transform: capitalize;
-    position: absolute;
-   bottom: 28%;
-}
+/* ===========================
+   SMALL MOBILE DEVICES
+   =========================== */
 
-.catagory{
-    position: absolute;
-    bottom: 20%;
-    font-weight: 500px;
-    color: #555;
-}
-.color{
-    position: absolute;
-    bottom: 15%;
-    font-weight: 500px;
-    color: #555;
-}
-.price{
-    font-size: 18px;
-    position: absolute;
-    bottom: 1%;
-    font-weight: 600;
-    
+@media (max-width: 480px){
+
+    .content-left h1{
+        font-size: 28px;
+    }
+
+    .content-left p{
+        font-size: 16px;
+    }
+
+    .product{
+        width: 200px;
+        height: 300px;
+        margin: 10px;
+    }
+
+    .product h4{
+        font-size: 15px;
+    }
+
+    .price{
+        font-size: 16px;
+    }
 }
